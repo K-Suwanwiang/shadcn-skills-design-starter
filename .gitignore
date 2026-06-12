@@ -1,0 +1,20 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+
+# Env (root-level safety net; playground/ has its own)
+.env
+.env.local
+.env.*.local
+
+# Node (safety net for any future root-level installs)
+node_modules/
