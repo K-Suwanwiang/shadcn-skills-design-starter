@@ -85,6 +85,34 @@ The skill auto-triggers when the user asks to:
 
 If unsure, **invoke the skill** — it costs nothing and ensures `DESIGN.md` is consulted.
 
+### Complementary skills
+
+For concerns outside UI build, defer to the right specialist skill (these run alongside `shadcn-ui-design`, not instead of it):
+
+| Skill | Invoke when the user asks for… |
+|---|---|
+| `a11y-audit` | WCAG 2.2 AA/AAA audit, contrast check, keyboard/screen-reader review |
+| `apply-aesthetic` | A specific look or feel (apple, linear-app, stripe, vercel, notion, brutalist, editorial, …) — resolved into our tokens |
+| `brandkit` | New brand/design foundation from a brief — palette + type + spacing tokens, light + dark, WCAG-verified |
+| `design-code` | UI code in a stack **other than** shadcn+Next.js+Tailwind (SwiftUI, Vue, Svelte, Angular, Flutter, …) — uses the Adapter Protocol |
+| `design-component` | A component spec (anatomy, variants, sizes, the 8 states, token map) — before or alongside code |
+| `design-qa` | CI quality gates — token lint, hardcoded-value lint, axe, contrast, visual regression |
+| `design-review` | Design critique across 6 weighted dimensions with Nielsen's 10 heuristics |
+| `design-tokens` | Generic DTCG tokens (3-tier primitive→semantic→component) — **for non-Figma projects**, not `DESIGN.md` |
+| `figma-integration` | Figma Variables ↔ DTCG token sync (collections + modes) for the multi-framework kit — separate from our `DESIGN.md` Figma binding |
+| `governance` | SemVer for tokens/components, contribution workflow, deprecation policy |
+| `image-to-code` | Turning a screenshot / mockup into code when no Figma source is available |
+| `migrate-design-system` | Mapping to/from Material 3, HIG, Fluent, Carbon, Radix, Chakra, etc. |
+| `performance` | Core Web Vitals work (LCP, INP, CLS), code-split, layout-shift, animation perf |
+| `prototype` | Fidelity ladder (content-first → wireframe → low-fi → high-fi), user journeys, usability testing |
+| `redesign` | Upgrading an existing UI to premium quality without breaking functionality |
+| `token-build` | Token build pipeline — Style Dictionary / Tokens Studio / DTCG → platform artifacts |
+| `ux-writing` | Microcopy, errors, empty states, voice & tone |
+
+For an overview of the kit (token tiers, framework adapters, design-system crosswalk, accessibility coverage) cross-reference `_ux-ui-shared/SKILL.md`.
+
+**Rule:** `shadcn-ui-design` stays canonical for any UI **build** in this repo (shadcn/ui + Tailwind v4 + Next.js targeting the `DESIGN.md` Figma export). `design-code`, `design-tokens`, and `figma-integration` from the kit are for **multi-framework / DTCG / non-Figma** workflows — they coexist on disk but are not the path for THIS project's UI. The other skills above own their concern only — when they touch UI code, they must still honor `DESIGN.md` Part A tokens and the hard rules in § 7.
+
 ---
 
 ## 6. Tech stack (for consuming projects)
