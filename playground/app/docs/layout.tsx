@@ -16,7 +16,11 @@ export default function DocsLayout({
             <SidebarNav />
           </ScrollArea>
         </aside>
-        <main className="min-w-0 px-6 py-8 lg:px-10 lg:py-10">{children}</main>
+        <main className="min-w-0">
+          <div className="mx-auto w-full max-w-7xl px-6 py-8 lg:px-10 lg:py-10">
+            {children}
+          </div>
+        </main>
       </div>
     </div>
   )

@@ -3,7 +3,7 @@ import { ColorMatchTool } from "@/components/docs/color-match-tool"
 
 export default function ColorMatchPage() {
   return (
-    <div className="max-w-3xl space-y-8">
+    <div className="mx-auto max-w-3xl space-y-8">
       <PageHeader
         title="Color Match"
         description="Paste any hex color (typically from a Figma frame) to find the closest matching design tokens — semantic, Tailwind, or Radix UI."

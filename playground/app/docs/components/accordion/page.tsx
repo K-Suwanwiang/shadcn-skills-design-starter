@@ -42,7 +42,7 @@ export function ProductFaq() {
 
 export default function AccordionDocsPage() {
   return (
-    <div className="max-w-4xl space-y-8">
+    <div className="mx-auto max-w-4xl space-y-8">
       <PageHeader
         title="Accordion"
         description="A vertically stacked set of interactive headings that each reveal a section of content. Sourced from Figma node 308:14."
